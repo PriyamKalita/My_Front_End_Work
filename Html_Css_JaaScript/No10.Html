@@ -1,0 +1,24 @@
+<html>  
+<head>  
+<title> Fibonacci Series in JavaScript </title>  
+</head>  
+<body>  
+  
+Enter Any Number: <input type="number" id="a"><br>
+Result Of Count digit:<input type="number" id="b"><br> 
+<input type="submit" onclick="count()"> 
+<script type="text/javascript"> 
+function count() 
+{
+    var x=Number (document.getElementById("a").value);
+     document.getElementById("b").value=digit(x);
+} 
+     function digit(a)
+     {
+        if (a<10) return 1;
+         return 1+digit(parseInt(a/10));
+
+     }
+</script>
+</body>  
+</html>

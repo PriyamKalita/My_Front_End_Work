@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Virtual Assamese Keyboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="/assets/dcode.css">
+    <link rel="stylesheet" href="keyboard/Keyboard.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        .home-intro {
+            background-image: url("Photo1.jpg");
+            background-size: cover;
+            
+            height: 100%;
+            color: rgb(255, 255, 255);
+            text-align: center;
+        }
+
+        body,
+        html {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="home-intro"></div>
+    <script>
+        function randomImage() {
+            var images = [
+                'Photo2.jpg',
+                'Photo3.jpg',
+                'Photo4.jpg'
+                ];
+           
+            var size = images.length;
+            var x = Math.floor(size * Math.random());
+            console.log(x);
+            var element = document.getElementsByClassName('home-intro');
+            console.log(element);
+            element[0].style["background-image"] = "url(" + images[x] + ")";
+        }
+
+        document.addEventListener("DOMContentLoaded", randomImage);
+
+
+    </script>
+
+</body>
+
+</html>

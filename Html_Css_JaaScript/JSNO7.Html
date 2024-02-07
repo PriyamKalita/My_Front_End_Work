@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Priyam kalita</title>
+</head>
+
+<body>
+
+    <button> Random Number between 1 and 100 Generate</button>
+
+    <h1 id="output" style="text-align: center">Random Number</h1>
+
+    <script>let btn = document.querySelector('button');
+      let output = document.querySelector('#output');
+      function getRandomNumber(min, max) {
+          let step1 = max - min + 1;
+          let step2 = Math.random() * step1;
+          let result = Math.floor(step2) + min;
+          return result;
+      }
+      btn.addEventListener('click', () => {
+          output.innerText = getRandomNumber(1, 100);
+      });</script>
+</body>
+
+</html>

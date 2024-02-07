@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <title>Piyam Kalita</title>
+      
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+  
+<body style="text-align:center;">
+          
+    <hr>
+    <form>
+        <p>Enter any value: <input style="text-align:center;" type="text"></p>
+          
+        <button type="button">Submit</button>
+    </form>
+    <hr>
+      
+    <h4></h4>
+      
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("button").click(function() {
+                var inputVal = $("input").val();
+                var gfg = $.isNumeric(inputVal);
+                  
+                if (gfg) {
+                    $("h4").text("Imputed value is a number");
+                }
+                else {
+                    $("h4").text("Imputed value is not a number");
+                }
+            });
+        });
+    </script>
+</body>
+  
+</html>  

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lange="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible " content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Priyam_Kalita</title>
+
+	<head>
+		<title>Enter Marks</title>
+		<script type="text/javascript">
+			function submit_marks() {
+				var sub1 = parseInt(document.getElementById('s1').value);
+				var sub2 = parseInt(document.getElementById('s2').value);
+				var sub3 = parseInt(document.getElementById('s3').value);
+
+				var total = sub1 + sub2 + sub3;
+				var per = total / 3;
+				var grade;
+				if (per >= 60 && per <= 100) {
+					grade = '1st division';
+				}
+
+				else if (per >= 45 && per <= 59) {
+					grade = '2nd division';
+				}
+
+				else {
+					grade = "Invalid or Failed";
+				}
+				document.getElementById("demo").innerHTML = "Your Total Marks : " + total + "<br>Your Percentage : " + per + "<br>Your Grade : " + grade;
+				// document.write("Your Total Marks : "+total);
+				// document.write("<br>Your Percentage : "+per);
+				// document.write("<br>Your Grade : "+grade);
+
+			}
+		</script>
+	</head>
+
+<body>
+	<h1>Enter Students Marks</h1>
+	<input type="text" id="s1" placeholder="Enter English Marks"><br>
+	<input type="text" id="s2" placeholder="Enter Science Marks"><br>
+	<input type="text" id="s3" placeholder="Enter Maths Marks"><br>
+
+
+	<input type="submit" onclick="submit_marks()">
+
+	<div id="demo"></div>
+</body>
+
+</html>

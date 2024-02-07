@@ -1,0 +1,26 @@
+<html>  
+<head>  
+<title> Fibonacci Series in JavaScript </title>  
+</head>  
+<body>  
+    Enter any Number <input type="text" id="a"> 
+    <input type="submit" onclick="check()"> 
+    <script type="text/javascript"> 
+function check() 
+{
+    var x=Number (document.getElementById("a").value); 
+    var rem, sum=0, i; 
+    for (i=0;x!=0;i++) 
+    {
+        rem = x %10; 
+        sum = sum +rem *Math.pow(2,1); 
+        x= parseInt(x/10); 
+    }
+        alert("Decimal Number = "+sum);
+        // document.write("Decimal Number = "+sum)
+        console.log(sum); 
+}
+        </script>
+    
+</body>  
+</html>
